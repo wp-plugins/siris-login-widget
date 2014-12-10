@@ -14,16 +14,16 @@ Add a custom Login and secured menu experience to your sidebar with ease.
 Add a custom Login and secured menu experience to your sidebar with ease. You can add as many Siris Login Widgets as needed. 
 
 Usage:
-1. Install and activate Siris Login Widget
-2. Install, activate and register Jetpack from WordPress.com
-3. Go to Jetpack settings 
-	3a. Activate ‘Widget Visibility’ module 
-4. In the WordPress dashboard under Appearance Tab:
-	4a. Go to Menus under Appearance tab
-	4b. Create a new Menu
-	4c. Go to Widgets under Appearance tab
-	4d. Add the Siris Login Widget 
-5. In the Widget options, select the name of the menu you want to show 
+1. Install and activate Siris Login Widget <br />
+2. Install, activate and register Jetpack from WordPress.com <br />
+3. Go to Jetpack settings <br />
+	3a. Activate ‘Widget Visibility’ module <br />
+4. In the WordPress dashboard under Appearance Tab: <br />
+	4a. Go to Menus under Appearance tab <br />
+	4b. Create a new Menu <br />
+	4c. Go to Widgets under Appearance tab <br />
+	4d. Add the Siris Login Widget <br />
+5. In the Widget options, select the name of the menu you want to show <br />
 6. Select your visibility rules
 
 = Support =
