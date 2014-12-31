@@ -3,7 +3,7 @@
 Plugin Name: Siris Login Widget
 Plugin URI: http://sirisgraphics.com/development/siris-login-widget
 Description: A widget to add login form to your sidebar with a custom menu.
-Version: 1.0
+Version: 1.1
 Author: Vamsi Pulavarthi
 Author URI: http://sirisgraphics.com/author/vamsi
 License: GPLv2

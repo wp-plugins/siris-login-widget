@@ -3,7 +3,7 @@ Contributors: vamsitech, sirisgraphics
 Tags: Widget, Login, Custom Menu, Custom Login, Sidebar Login, Vertical Menu, Personalized Login
 Requires at least: 4.0
 Tested up to: 4.0.1
-Stable Tag: 1.0
+Stable Tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,12 +17,12 @@ Usage: <br />
 1. Install and activate Siris Login Widget <br />
 2. Install, activate and register Jetpack from WordPress.com <br />
 3. Go to Jetpack settings <br />
-    3a. Activate ‘Widget Visibility’ module <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a. Activate ‘Widget Visibility’ module <br />
 4. In the WordPress dashboard under Appearance Tab: <br />
-    4a. Go to Menus under Appearance tab <br />
-    4b. Create a new Menu <br />
-    4c. Go to Widgets under Appearance tab <br />
-    4d. Add the Siris Login Widget <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4a. Go to Menus under Appearance tab <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4b. Create a new Menu <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4c. Go to Widgets under Appearance tab <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4d. Add the Siris Login Widget <br />
 5. In the Widget options, select the name of the menu you want to show <br />
 6. Select your visibility rules
 
