@@ -10,7 +10,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Add a custom Login and secured menu experience to your sidebar with ease.
 
 == Description ==
-
 Add a custom Login and secured menu experience to your sidebar with ease. You can add as many Siris Login Widgets as needed. 
 
 Usage: <br />
@@ -50,8 +49,12 @@ Widget
 There are no questions yet. Please ask any questions you have and we'll add them here.
 
 == Changelog ==
+= 1.1 =
+* Fixing a defect to fix an invalid file reference.
+
 = 1.0 =
 * First Version.
 
 == Upgrade Notice ==
-None
+= 1.1 =
+* Fixing a defect to fix an invalid file reference.
