@@ -98,9 +98,7 @@ class SirisLoginWidget extends WP_Widget {
                 'id_submit' => 'wp-submit',
                 'remember' => true,
                 'value_username' => NULL,
-                'value_remember' => false ); 
-            
-            include( plugins_url( 'addins/loginForm.php', __FILE__ ) );
+                'value_remember' => false );            
             wp_login_form( $args );
         }
         echo $after_widget;
