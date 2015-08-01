@@ -2,36 +2,37 @@
 Contributors: vamsitech, sirisgraphics
 Tags: Widget, Login, Custom Menu, Custom Login, Sidebar Login, Vertical Menu, Personalized Login
 Requires at least: 4.0
-Tested up to: 4.0.1
-Stable Tag: 1.1
+Tested up to: 4.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add a custom Login and secured menu experience to your sidebar with ease.
+Add a customizable Login form and secured menu experience to your sidebar with ease.
 
 == Description ==
 Add a custom Login and secured menu experience to your sidebar with ease. You can add as many Siris Login Widgets as needed. 
 
 Usage: <br />
 1. Install and activate Siris Login Widget <br />
-2. Install, activate and register Jetpack from WordPress.com <br />
-3. Go to Jetpack settings <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a. Activate ‘Widget Visibility’ module <br />
-4. In the WordPress dashboard under Appearance Tab: <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4a. Go to Menus under Appearance tab <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4b. Create a new Menu <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4c. Go to Widgets under Appearance tab <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4d. Add the Siris Login Widget <br />
-5. In the Widget options, select the name of the menu you want to show <br />
-6. Select your visibility rules
+2. In the WordPress dashboard under Appearance Tab: <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2a. Go to Menus under Appearance tab <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2b. Create a new Menu <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2c. Go to Widgets under Appearance tab <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2d. Add the Siris Login Widget <br />
+3. In the Widget options, select the name of the menu you want to show <br />
 
 = Support =
 <a href="http://sirisgraphics.com/contact-us/">contact us</a> for any kind of support. We promise to get back to you as soon as possible.
 
 Like our plugin? Please rate us and send us a comment so we can make the plugin better for you.
 
+=Coming Soon=
+1. Sub menu's are not supported with this version. We are working on expanding support to sub menu's.
+2. We are also working on expanding support to select link colors. You will have to use the Plugins Editor to change the colors. 
+
 == Screenshots == 
-None
+1. Widget Admin screen in Widgets Section. Just select the menu you would like to use and you are done.
+2. Widget Logged out view
+3. Widget Logged in view
 
 == Installation ==
 1. Download and unzip the plugin.

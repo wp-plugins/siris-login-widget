@@ -1,0 +1,32 @@
+/* CSS for Siris Login*/
+ul.svmenu {
+    list-style: none;
+   display: block;
+}
+ul.svmenu li.menu-item {
+    display: block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 3px 0;
+}
+ul.svmenu li.menu-item  a {
+    display: block;
+    background-color: #363636;
+    color: #949494;
+    padding: .1em 0px .1em .5em;
+    font-size: 16px;
+    font-family: Oswald,Arial,"Arial Unicode MS",Helvetica,sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+ul.svmenu li.menu-item a:hover, 
+ul.svmenu li.current-menu-item a {
+    background-color: #f34444;
+    color: #780808 !important;
+}
+
+/*svmenu submenu styles*/
+ul.svmenu .sub-menu {
+    display: none;
+}

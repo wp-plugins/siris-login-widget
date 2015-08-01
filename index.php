@@ -3,7 +3,7 @@
 Plugin Name: Siris Login Widget
 Plugin URI: http://sirisgraphics.com/development/siris-login-widget
 Description: A widget to add login form to your sidebar with a custom menu.
-Version: 1.1
+Version: 1.2
 Author: Vamsi Pulavarthi
 Author URI: http://sirisgraphics.com/author/vamsi
 License: GPLv2
@@ -18,6 +18,9 @@ class SirisLoginWidget extends WP_Widget {
 		$widget_ops = array( 'classname' => 'slw', 
                              'description' => __( ' A widget to add login form to your sidebar with a custom menu.', $plugin_tag ) );
 		$this->WP_Widget( false, __( 'Siris Login Widget', $plugin_tag ), $widget_ops );
+
+        wp_register_style( 'my-plugin', plugins_url( 'siris-login-widget/css/slwstyle.css' ) );
+		wp_enqueue_style( 'my-plugin' );
 	}
 
     function form($instance) {
@@ -59,31 +62,38 @@ class SirisLoginWidget extends WP_Widget {
 		global $user_ID, $user_identity, $user_level, $user_email, $user_login;
 		extract($args);
 		echo $before_widget;
-        $slw_menu = empty( $instance['slw_menu'] ) ? '' : $instance['slw_menu'];
+        //$slw_menu = empty( $instance['slw_menu'] ) ? '' : $instance['slw_menu'];
 
         if ( is_user_logged_in() ) 
-        { 
-        ?>
-            <div id="loginForm" class="gradient">
-                <p id="displayCredentials">
-                    Welcome <?php echo $user_identity; ?>
-		        </p>
-            </div>
-         <?php
+        {
 		    $slw_menu = ! empty( $instance['slw_menu'] ) ? wp_get_nav_menu_object( $instance['slw_menu'] ) : false;
 		    if ( !$slw_menu )
 			    return;
-		    wp_nav_menu( array( 'fallback_cb' => '', 'menu' => $slw_menu ) );
+        
+            echo $before_title;
+            echo "Welcome ";
+            echo $user_identity;
+            echo $after_title;    
+            echo "<div class='clearfix' style='padding: 5px;'>";
+		    wp_nav_menu( 
+                array( 'theme_location' => 'special',
+                    'container' => 'div', 
+                    'container_class' => '',
+                    'menu' => $slw_menu, 
+                    'menu_class' => 'svmenu',
+                    'items_wrap' => '<ul class="%2$s">%3$s</ul>',
+                    'fallback_cb' => 'false' ) );
+            echo "</div>";
         ?>
-            <a href="<?php echo wp_logout_url( home_url() ); ?>"><?php _e("Log out", $plugin_tag); ?></a>
+
         <?php
         }
         else
         {
             echo $before_title;
-            _e('Log In', $plugin_tag);
-            echo $after_title;
-            
+            echo "Login Form";
+            echo $after_title;  
+            echo "<div class='clearfix' style='padding: 5px;'>";
             $args = array(
                 'echo' => true,
                 'redirect' => site_url( $_SERVER['REQUEST_URI'] ),
@@ -100,17 +110,38 @@ class SirisLoginWidget extends WP_Widget {
                 'value_username' => NULL,
                 'value_remember' => false );            
             wp_login_form( $args );
+
+            echo "</div>";
         }
         echo $after_widget;
     }
 }
 
-add_action('widgets_init', 'sirisWidgetsInit');
-
 // init widgets
+add_action('widgets_init', 'sirisWidgetsInit');
 function sirisWidgetsInit() {
     $plugin_dir = basename(dirname(__FILE__));
     load_plugin_textdomain($plugin_tag, false, $plugin_dir . '/languages' );
 	register_widget('SirisLoginWidget');
+}
+/*
+//Add jQuery UI Classes to Menu Items
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+function special_nav_class($classes, $item){
+    $classes[] = "ui-menu-item";
+    return $classes;
+}
+*/
+//Add Logout list to Menu's added by Siris Login Widget
+add_filter('wp_nav_menu_items', 'add_login_logout_link', 10, 2);
+function add_login_logout_link($items, $args) {
+    ob_start();
+    wp_loginout('index.php');
+    $loginoutlink = ob_get_contents();
+    ob_end_clean();
+    if($args->theme_location == 'special') {
+        $items .= '<li class="menu-item ui-menu-item">'. $loginoutlink .'</li>';        
+    }
+    return $items;
 }
 ?>
